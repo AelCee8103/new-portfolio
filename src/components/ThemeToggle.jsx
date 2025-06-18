@@ -7,14 +7,18 @@ export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
+    if (storedTheme === "light") {
       setIsDarkMode(false);
       document.documentElement.classList.remove("dark");
+    } else {
+      // Default to dark mode if no theme is stored or if it's set to dark
+      setIsDarkMode(true);
+      document.documentElement.classList.add("dark");
+      if (!storedTheme) {
+        localStorage.setItem("theme", "dark");
+      }
     }
-  });
+  }, []); // Added dependency array to prevent infinite re-renders
   const toggleTheme = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove("dark");
