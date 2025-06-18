@@ -1,6 +1,5 @@
 import { ArrowDown } from "lucide-react";
 
-
 export const HeroSection = () => {
   return (
     <section
@@ -21,10 +20,11 @@ export const HeroSection = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
-            magnam, unde neque quia aspernatur, delectus quibusdam doloremque
-            enim dicta at facere illum fuga, accusamus dolore totam voluptatibus
-            eveniet? Minima, officiis?
+            I'm a passionate software developer specializing in building modern
+            web applications with React and JavaScript. I also do other
+            technologies like Laravel and Python. I enjoy learning new tools to
+            solve real-world problems and turning ideas into reality through
+            clean, efficient code and creative solutions.
           </p>
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">

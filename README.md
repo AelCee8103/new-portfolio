@@ -1,12 +1,91 @@
-# React + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. Features a beautiful UI with dark mode support, smooth animations, and a contact form integration.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 💨 Built with React + Vite for lightning-fast development and performance
+- 🎨 Styled with Tailwind CSS for responsive, modern design
+- 🌙 Dark mode support
+- ✨ Animated background with stars effect
+- 📬 Contact form with EmailJS integration
+- 🚀 Sections for About, Skills, Projects, and Contact
+- 📱 Fully responsive design for all devices
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Before you begin, ensure you have the following installed:
+
+- Node.js (v16 or higher)
+- npm (v7 or higher)
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone [your-repo-url]
+cd portfolio
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Set up EmailJS (for contact form):
+   - Sign up at [EmailJS](https://www.emailjs.com/)
+   - Create a service and template
+   - Update the EmailJS configuration in `src/components/ContactSection.jsx` with your credentials
+
+## Development
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:5173`
+
+## Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To preview the production build:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+portfolio/
+├── public/          # Static assets
+├── src/
+│   ├── components/  # React components
+│   ├── hooks/       # Custom React hooks
+│   ├── lib/         # Utility functions
+│   ├── pages/       # Page components
+│   └── assets/      # Images and other assets
+└── ...config files
+```
+
+## Technologies Used
+
+- React
+- Vite
+- Tailwind CSS
+- Radix UI (for UI components)
+- EmailJS (for contact form)
+- Lucide React (for icons)
+
+## Contributing
+
+Feel free to open issues and pull requests for any improvements you want to add.
