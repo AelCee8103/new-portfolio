@@ -1,4 +1,11 @@
-import { Briefcase, Code, Database, User, Clipboard, ClipboardListIcon } from "lucide-react";
+import {
+  Briefcase,
+  Code,
+  Database,
+  User,
+  Clipboard,
+  ClipboardListIcon,
+} from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -27,10 +34,13 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href=""
+                href="/Resume_Cantila.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
-                Download CV
+                Download Resume
               </a>
             </div>
           </div>
