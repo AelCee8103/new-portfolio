@@ -16,20 +16,20 @@ const projects = [
     title: "CornHub",
     description:
       "A responsive website that allows users to search for movies, view their trailers, list their favorites, and create their own watchlists using PHP, MySQL, and JavaScript.",
-    image: "/projects/project2.jfif",
+    image: "/projects/cornhub.png",
     tag: ["Web App", "PHP", "MySQL", "JavaScript"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/AelCee8103/CornHub.git",
   },
   {
     id: 3,
     title: "Online GradeBook System",
     description:
       "An easy-to-use online gradebook system for teachers to manage student grades, attendance, and assigning of classes and subjects using Express, Node.js, MySQL and React.",
-    image: "/projects/project3.jfif",
+    image: "/projects/gradebook.png",
     tag: ["Web App", "Express", "Node.js", "MySQL", "React"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/AelCee8103/OnlineGradeBook",
   },
 ];
 
@@ -54,11 +54,13 @@ export const ProjectSection = () => {
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
-                <img
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  src={project.image}
-                  alt={project.title}
-                />
+                <a href={project.image} target="_blank">
+                  <img
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </a>
               </div>
 
               <div className="p-6">
