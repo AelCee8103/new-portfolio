@@ -6,10 +6,10 @@ const projects = [
     title: "Shiritori Versus",
     description:
       "An interactive two-player mobile word game based on Japanese wordplay called Shiritori using Dart, Flutter and Firebase.",
-    image: "/projects/project1.jfif",
+    image: "/projects/shiritori-versus.png",
     tag: ["Mobile App", "Game", "Dart", "Flutter", "Firebase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "/demo/shiritori-versus-demo.mp4",
+    githubUrl: "https://github.com/AelCee8103/shiritori-versus-prototype",
   },
   {
     id: 2,
@@ -79,13 +79,13 @@ export const ProjectSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
+                    {/* <a
                       target="_blank"
                       href={project.demoUrl}
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <ExternalLink size={20} />
-                    </a>
+                    </a> */}
                     <a
                       target="_blank"
                       href={project.githubUrl}
