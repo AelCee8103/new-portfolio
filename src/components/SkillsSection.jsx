@@ -3,23 +3,29 @@ import { cn } from "@/lib/utils";
 const skills = [
   //Design skills
   { name: "HTML/CSS", level: 90, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
+  { name: "JavaScript", level: 87, category: "frontend" },
   { name: "React", level: 80, category: "frontend" },
   { name: "Tailwind CSS", level: 60, category: "frontend" },
+  { name: "Dart", level: 78, category: "frontend" },
 
   //Backend and Database skills
   { name: "Node.js", level: 75, category: "backend" },
-  { name: "Python", level: 90, category: "backend" },
-  { name: "SQL", level: 95, category: "database" },
+  { name: "Python", level: 88, category: "backend" },
+  { name: "MySQL", level: 95, category: "database" },
+  { name: "PostgreSQL", level: 75, category: "database" },
   { name: "Express", level: 75, category: "backend" },
-  { name: "PHP", level: 80, category: "backend" },
-  { name: "Laravel", level: 67, category: "backend" },
+  { name: "PHP", level: 70, category: "backend" },
+  { name: "Laravel", level: 62, category: "backend" },
   { name: "Java", level: 85, category: "backend" },
   { name: "JDBC", level: 63, category: "backend" },
+  { name: "Firebase", level: 64, category: "backend" },
+
   //Tools
   { name: "Git/GitHub", level: 93, category: "tools" },
-  { name: "Docker", level: 61, category: "tools" },
+  { name: "Docker", level: 56, category: "tools" },
   { name: "VS Code", level: 95, category: "tools" },
+  { name: "Flutter", level: 78, category: "tools" },
+  { name: "FlutterFlow", level: 88, category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "database", "tools"];
@@ -61,8 +67,11 @@ export const SkillsSection = () => {
               key={key}
               className="bg-card p-6 rounded-lg shadow-xs card-hover"
             >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
+              <div className="mb-4">
+                <h3 className="font-semibold text-left text-lg">
+                  {" "}
+                  {skill.name}
+                </h3>
                 <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
                   <div
                     className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out"

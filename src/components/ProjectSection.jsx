@@ -31,6 +31,16 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/AelCee8103/OnlineGradeBook",
   },
+  {
+    id: 4,
+    title: "CodixsGo!",
+    description:
+      "CodixsGo is a web-based platform for creating, managing, and taking coding quizzes. Its purpose is to help users improve their programming skills through interactive quizzes and a collaborative environment. Users can create, share, and participate in quizzes, with features like leaderboards and dashboards for tracking progress.",
+    image: "/projects/codixsgo.png",
+    tag: ["Web App", "Express", "Node.js", "MySQL", "React"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/AelCee8103/OnlineGradeBook",
+  },
 ];
 
 export const ProjectSection = () => {
