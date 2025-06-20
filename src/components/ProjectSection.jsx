@@ -35,11 +35,31 @@ const projects = [
     id: 4,
     title: "CodixsGo!",
     description:
-      "CodixsGo is a web-based platform for creating, managing, and taking coding quizzes. Its purpose is to help users improve their programming skills through interactive quizzes and a collaborative environment. Users can create, share, and participate in quizzes, with features like leaderboards and dashboards for tracking progress.",
+      "CodixsGo is a platform for creating and taking coding quizzes with progress tracking and leaderboards using PHP and JavaScript.",
     image: "/projects/codixsgo.png",
-    tag: ["Web App", "Express", "Node.js", "MySQL", "React"],
+    tag: ["Web App", "PHP", "JavaScript", "MySQL", "Bootstrap"],
     demoUrl: "#",
-    githubUrl: "https://github.com/AelCee8103/OnlineGradeBook",
+    githubUrl: "https://github.com/AelCee8103/CodixsGo",
+  },
+  {
+    id: 5,
+    title: "Library Management System",
+    description:
+      "Designed for small libraries, streamlining core operations such as book lending, returns, and inventory management to improve usability for both staff and administrators.",
+    image: "/projects/slibrary.png",
+    tag: ["Desktop App", "Java"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/AelCee8103/SLibrary",
+  },
+  {
+    id: 6,
+    title: "Healthy Life Clinic",
+    description:
+      "HealthyLife is a web-based clinic management system built using the Django framework in Python.",
+    image: "/projects/healthylife.png",
+    tag: ["Web App", "Django", "Python"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/AelCee8103/healthy-life.git",
   },
 ];
 
