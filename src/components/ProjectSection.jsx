@@ -61,6 +61,18 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/AelCee8103/healthy-life.git",
   },
+  {
+    id: 7,
+    title: "Movie Sentiment Analysis",
+    description:
+      "A Streamlit web app that predicts the sentiment of movie reviews using multiple machine learning models (Logistic Regression, Random Forest, SVM, Passive Aggressive, XGBoost). Trained on the IMDB dataset, it lets users input a review, select a model, and instantly see if the sentiment is positive or negative.",
+    image: "/projects/movie_sentiment.png",
+    tag: ["Web App", "Streamlit", "Python", "Machine Learning"],
+    demoUrl:
+      "https://aelcee8103-movie-review-sentiment-analysis-v2-app-qjr5yl.streamlit.app/#movie-sentiment-demo",
+    githubUrl:
+      "https://github.com/AelCee8103/movie_review-sentiment_analysis-v2.git",
+  },
 ];
 
 export const ProjectSection = () => {
@@ -111,13 +123,18 @@ export const ProjectSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    {/* <a
+                    <a
                       target="_blank"
                       href={project.demoUrl}
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      title={
+                        project.demoUrl === "#"
+                          ? "Demo not available"
+                          : "Demo available"
+                      }
                     >
                       <ExternalLink size={20} />
-                    </a> */}
+                    </a>
                     <a
                       target="_blank"
                       href={project.githubUrl}
