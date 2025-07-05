@@ -73,6 +73,17 @@ const projects = [
     githubUrl:
       "https://github.com/AelCee8103/movie_review-sentiment_analysis-v2.git",
   },
+  {
+    id: 8,
+    title: "Heart Disease Prediction",
+    description:
+      "A Streamlit web app that predicts the presence of heart disease in patients using various machine learning models. Users can input patient data and receive instant predictions.",
+    image: "/projects/heartdisease.png",
+    tag: ["Web App", "Streamlit", "Python", "Machine Learning"],
+    demoUrl:
+      "https://aelcee8103-heart-disease-predictor-app-qp2txm.streamlit.app/",
+    githubUrl: "https://github.com/AelCee8103/heart-disease-predictor.git",
+  },
 ];
 
 export const ProjectSection = () => {
