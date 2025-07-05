@@ -77,7 +77,7 @@ const projects = [
     id: 8,
     title: "Heart Disease Prediction",
     description:
-      "A Streamlit web app that predicts the presence of heart disease in patients using various machine learning models. Users can input patient data and receive instant predictions.",
+      "A Streamlit web app that predicts the presence of heart disease in patients using Random Forest machine learning model. Users can input patient data and receive instant predictions.",
     image: "/projects/heartdisease.png",
     tag: ["Web App", "Streamlit", "Python", "Machine Learning"],
     demoUrl:
