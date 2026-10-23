@@ -24,8 +24,8 @@ export const ContactSection = () => {
 
     setTimeout(() => {
       emailjs
-        .sendForm("service_1i40daj", "template_5tzyvwb", form.current, {
-          publicKey: "kB4epaWS2u5e5Fbi8",
+        .sendForm("service_gfj57ib", "template_u15tf2h", form.current, {
+          publicKey: "Qaq2NeA4kBOl1ppic",
         })
         .then(
           () => {
@@ -82,9 +82,9 @@ export const ContactSection = () => {
                   <h4 className="font-medium">Email</h4>
                   <a
                     className="text-muted-foreground hover:text-primary transition-colors underline"
-                    href="mailto:a.cantila.533397@umindanao.edu.ph"
+                    href="mailto:useless8103@gmail.com"
                   >
-                    a.cantila.533397@umindanao.edu.ph
+                    useless8103@gmail.com
                   </a>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export const ContactSection = () => {
               <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
                 <a
-                  href="https://www.linkedin.com/in/augustine-ervin-leig-cantila-525543279?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BQUGI5u%2F%2FQmaGrbgSg1d2cw%3D%3D"
+                  href="https://www.linkedin.com/in/augustine-ervin-leigh-cantila-2bb799444"
                   target="_blank"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >

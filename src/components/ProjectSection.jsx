@@ -33,8 +33,20 @@ const projects = [
     tag: ["Web App", "PHP", "MySQL", "JavaScript"],
     demoUrl: "#",
     githubUrl: "https://github.com/AelCee8103/CornHub.git",
+
   },
 
+
+  {
+    id: 4,
+    title: "BookWormsQ",
+    description:
+    "A Bubble.io trivia app using the Open Trivia DB API where users customize quizzes by category and difficulty, earn points to climb the leaderboard, and review past quiz snapshots.",
+    image: "/projects/bookwormsQ.png",
+    tag: ["Web App", "Bubble.io", "Trivia Quiz App", ""],
+    demoUrl: "https://bookwormsqver2.bubbleapps.io/version-test/",
+    githubUrl: "#",
+  },
 
 
   {
@@ -80,6 +92,21 @@ export const ProjectSection = () => {
     }
   };
 
+  const handleCodeClick = (e, project) => {
+    const hasCode =
+      project.githubUrl &&
+      project.githubUrl.trim() !== "" &&
+      project.githubUrl !== "#";
+
+    if (!hasCode) {
+      e.preventDefault();
+      toast({
+        title: "No source code available",
+        description: `Source code for "${project.title}" is not available. It is possible that the code is missing or the app was built using a no-code platform like Bubble.io etc.`,
+      });
+    }
+  };
+
   return (
     <section id="projects" className="py-24 px-24 relative">
       <div className="container mx-auto max-w-5xl">
@@ -99,6 +126,11 @@ export const ProjectSection = () => {
               project.demoUrl &&
               project.demoUrl.trim() !== "" &&
               project.demoUrl !== "#";
+
+            const hasCode =
+              project.githubUrl &&
+              project.githubUrl.trim() !== "" &&
+              project.githubUrl !== "#";
 
             return (
               <div
@@ -156,17 +188,20 @@ export const ProjectSection = () => {
 
                       <div className="relative group/tooltip inline-flex items-center">
                         <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href={project.githubUrl}
+                          target={hasCode ? "_blank" : undefined}
+                          rel={hasCode ? "noopener noreferrer" : undefined}
+                          href={project.githubUrl || "#"}
+                          onClick={(e) => handleCodeClick(e, project)}
                           className="text-foreground/80 hover:text-primary transition-colors duration-300 inline-flex items-center justify-center p-1 rounded-md"
-                          aria-label="View Source Code on GitHub"
+                          aria-label={
+                            hasCode ? "Source code available" : "No source code available"
+                          }
                         >
                           <Github size={20} />
                         </a>
                         <div className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/tooltip:flex flex-col items-center z-30">
                           <div className="whitespace-nowrap rounded-md bg-card border border-border px-2.5 py-1 text-xs font-medium text-foreground shadow-md">
-                            Source code
+                            {hasCode ? "Source code available" : "No source code available"}
                           </div>
                           <div className="w-2 h-2 -mt-1 rotate-45 bg-card border-r border-b border-border"></div>
                         </div>
