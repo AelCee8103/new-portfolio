@@ -18,10 +18,10 @@ const projects = [
     title: "Resubro",
     description:
     "A cloud-native resume optimizer using React Router, Tailwind CSS, and Zustand, which integrates the Puter.js API for AI-driven analysis and secure cloud storage, while leveraging PDF.js for automated content extraction to generate actionable ATS feedback.",
-    image: "/projects/cornhub.png",
-    tag: ["Web App", "PHP", "MySQL", "JavaScript"],
+    image: "/projects/resubro.png",
+    tag: ["Web App", "Puter API", "React", "JavaScript", "TypeScript", "AI Integration", "Tailwind CSS"],
     demoUrl: "https://puter.com/app/aelcee-ai-resume-analyzer",
-    githubUrl: "https://github.com/AelCee8103/CornHub.git",
+    githubUrl: "https://github.com/AelCee8103/ai-resume-analyzer",
   },
 
   {
