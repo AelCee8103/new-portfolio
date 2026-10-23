@@ -1,4 +1,5 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const projects = [
   {
@@ -11,8 +12,20 @@ const projects = [
     demoUrl: "/demo/shiritori-versus-demo.mp4",
     githubUrl: "https://github.com/AelCee8103/shiritori-versus-prototype",
   },
+
   {
     id: 2,
+    title: "Resubro",
+    description:
+    "A cloud-native resume optimizer using React Router, Tailwind CSS, and Zustand, which integrates the Puter.js API for AI-driven analysis and secure cloud storage, while leveraging PDF.js for automated content extraction to generate actionable ATS feedback.",
+    image: "/projects/cornhub.png",
+    tag: ["Web App", "PHP", "MySQL", "JavaScript"],
+    demoUrl: "https://puter.com/app/aelcee-ai-resume-analyzer",
+    githubUrl: "https://github.com/AelCee8103/CornHub.git",
+  },
+
+  {
+    id: 3,
     title: "CornHub",
     description:
       "A responsive website that allows users to search for movies, view their trailers, list their favorites, and create their own watchlists using PHP, MySQL, and JavaScript.",
@@ -21,46 +34,9 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/AelCee8103/CornHub.git",
   },
-  {
-    id: 3,
-    title: "Online GradeBook System",
-    description:
-      "An easy-to-use online gradebook system for teachers to manage student grades, attendance, and assigning of classes and subjects using Express, Node.js, MySQL and React.",
-    image: "/projects/gradebook.png",
-    tag: ["Web App", "Express", "Node.js", "MySQL", "React"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/AelCee8103/OnlineGradeBook",
-  },
-  {
-    id: 4,
-    title: "CodixsGo!",
-    description:
-      "CodixsGo is a platform for creating and taking coding quizzes with progress tracking and leaderboards using PHP and JavaScript.",
-    image: "/projects/codixsgo.png",
-    tag: ["Web App", "PHP", "JavaScript", "MySQL", "Bootstrap"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/AelCee8103/CodixsGo",
-  },
-  {
-    id: 5,
-    title: "Library Management System",
-    description:
-      "Designed for small libraries, streamlining core operations such as book lending, returns, and inventory management to improve usability for both staff and administrators.",
-    image: "/projects/slibrary.png",
-    tag: ["Desktop App", "Java"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/AelCee8103/SLibrary",
-  },
-  {
-    id: 6,
-    title: "Healthy Life Clinic",
-    description:
-      "HealthyLife is a web-based clinic management system built using the Django framework in Python.",
-    image: "/projects/healthylife.png",
-    tag: ["Web App", "Django", "Python"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/AelCee8103/healthy-life.git",
-  },
+
+
+
   {
     id: 7,
     title: "Movie Sentiment Analysis",
@@ -87,6 +63,23 @@ const projects = [
 ];
 
 export const ProjectSection = () => {
+  const { toast } = useToast();
+
+  const handleDemoClick = (e, project) => {
+    const hasDemo =
+      project.demoUrl &&
+      project.demoUrl.trim() !== "" &&
+      project.demoUrl !== "#";
+
+    if (!hasDemo) {
+      e.preventDefault();
+      toast({
+        title: "Demo not available",
+        description: `Live demo for "${project.title}" is currently not available.`,
+      });
+    }
+  };
+
   return (
     <section id="projects" className="py-24 px-24 relative">
       <div className="container mx-auto max-w-5xl">
@@ -101,63 +94,89 @@ export const ProjectSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
-            <div
-              key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
-            >
-              <div className="h-48 overflow-hidden">
-                <a href={project.image} target="_blank">
-                  <img
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src={project.image}
-                    alt={project.title}
-                  />
-                </a>
-              </div>
+          {projects.map((project, key) => {
+            const hasDemo =
+              project.demoUrl &&
+              project.demoUrl.trim() !== "" &&
+              project.demoUrl !== "#";
 
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tag.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 text-xs font-medium rounded-full bg-primary/15 text-secondary-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+            return (
+              <div
+                key={key}
+                className="group relative bg-card rounded-lg shadow-xs card-hover hover:z-20"
+              >
+                <div className="h-48 overflow-hidden rounded-t-lg">
+                  <a href={project.image} target="_blank" rel="noopener noreferrer">
+                    <img
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      src={project.image}
+                      alt={project.title}
+                    />
+                  </a>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                <p className="text-sm mb-4 text-muted-foreground">
-                  {project.description}
-                </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      target="_blank"
-                      href={project.demoUrl}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                      title={
-                        project.demoUrl === "#"
-                          ? "Demo not available"
-                          : "Demo available"
-                      }
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      target="_blank"
-                      href={project.githubUrl}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
+                <div className="p-6">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tag.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 text-xs font-medium rounded-full bg-primary/15 text-secondary-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                  <p className="text-sm mb-4 text-muted-foreground">
+                    {project.description}
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <div className="flex space-x-3 items-center">
+                      <div className="relative group/tooltip inline-flex items-center">
+                        <a
+                          target={hasDemo ? "_blank" : undefined}
+                          rel={hasDemo ? "noopener noreferrer" : undefined}
+                          href={project.demoUrl || "#"}
+                          onClick={(e) => handleDemoClick(e, project)}
+                          className="text-foreground/80 hover:text-primary transition-colors duration-300 inline-flex items-center justify-center p-1 rounded-md"
+                          aria-label={
+                            hasDemo ? "Demo available" : "Demo not available"
+                          }
+                        >
+                          <ExternalLink size={20} />
+                        </a>
+                        <div className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/tooltip:flex flex-col items-center z-30">
+                          <div className="whitespace-nowrap rounded-md bg-card border border-border px-2.5 py-1 text-xs font-medium text-foreground shadow-md">
+                            {hasDemo ? "Demo available" : "Demo not available"}
+                          </div>
+                          <div className="w-2 h-2 -mt-1 rotate-45 bg-card border-r border-b border-border"></div>
+                        </div>
+                      </div>
+
+                      <div className="relative group/tooltip inline-flex items-center">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.githubUrl}
+                          className="text-foreground/80 hover:text-primary transition-colors duration-300 inline-flex items-center justify-center p-1 rounded-md"
+                          aria-label="View Source Code on GitHub"
+                        >
+                          <Github size={20} />
+                        </a>
+                        <div className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/tooltip:flex flex-col items-center z-30">
+                          <div className="whitespace-nowrap rounded-md bg-card border border-border px-2.5 py-1 text-xs font-medium text-foreground shadow-md">
+                            Source code
+                          </div>
+                          <div className="w-2 h-2 -mt-1 rotate-45 bg-card border-r border-b border-border"></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         <div className="text-center mt-12">
           <a
