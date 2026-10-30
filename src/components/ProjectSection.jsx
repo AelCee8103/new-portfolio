@@ -28,9 +28,9 @@ const projects = [
     id: 3,
     title: "CornHub",
     description:
-      "A responsive website that allows users to search for movies, view their trailers, list their favorites, and create their own watchlists using PHP, MySQL, and JavaScript.",
+      "A full-stack movie discovery and catalog web app with real-time TMDB search, movie details, trailers, watchlists, and custom playlists, built with React, Vite, Tailwind CSS, Laravel, and Sanctum.",
     image: "/projects/cornhub.png",
-    tag: ["Web App", "PHP", "MySQL", "JavaScript"],
+    tag: ["Full-Stack App", "React", "Vite", "Tailwind CSS", "Laravel", "PHP", "TMDB API"],
     demoUrl: "#",
     githubUrl: "https://github.com/AelCee8103/CornHub.git",
 
@@ -50,6 +50,19 @@ const projects = [
 
 
   {
+    id: 5,
+    title: "KaraoQ",
+    description:
+    "KaraoQ is a real-time karaoke web app that lets hosts create synchronized karaoke rooms while guests join via QR code or room key, queue songs, and react live. Built with Next.js, React, TypeScript, Tailwind CSS, Supabase (PostgreSQL and Realtime), and the YouTube Data API.",
+    image: "/projects/karaoq.png",
+    tag: ["Web App", "Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "YouTube Data API"],
+    demoUrl:
+      "https://karao-q.vercel.app/",
+    githubUrl:
+      "https://github.com/AelCee8103/KaraoQ.git",
+  },
+
+  {
     id: 7,
     title: "Movie Sentiment Analysis",
     description:
@@ -61,6 +74,7 @@ const projects = [
     githubUrl:
       "https://github.com/AelCee8103/movie_review-sentiment_analysis-v2.git",
   },
+
   {
     id: 8,
     title: "Heart Disease Prediction",
