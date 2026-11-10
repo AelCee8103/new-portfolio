@@ -28,10 +28,10 @@ const projects = [
     id: 3,
     title: "CornHub",
     description:
-      "A full-stack movie discovery and catalog web app with real-time TMDB search, movie details, trailers, watchlists, and custom playlists, built with React, Vite, Tailwind CSS, Laravel, and Sanctum.",
+      "A React and Vite movie discovery app with TMDB search, movie and TV details, trailers, watchlists, playlists, and playback, using Supabase Auth, PostgreSQL, RLS, and Vercel server-side functions.",
     image: "/projects/cornhub.png",
-    tag: ["Full-Stack App", "React", "Vite", "Tailwind CSS", "Laravel", "PHP", "TMDB API"],
-    demoUrl: "#",
+    tag: ["Web App", "React", "Vite", "Tailwind CSS", "Supabase", "Vercel", "TMDB API"],
+    demoUrl: "https://corn-hub-pied.vercel.app/",
     githubUrl: "https://github.com/AelCee8103/CornHub.git",
 
   },
